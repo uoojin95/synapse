@@ -1,7 +1,20 @@
-# Tauri + React + Typescript
+# Synapse
 
-This template should help get you started developing with Tauri, React and Typescript in Vite.
+Synapse is a note taking application that helps you with knowledge retention.
 
-## Recommended IDE Setup
+To get started, install some dependencies.
+- Tauri
+- Rust (Cargo, the package manager)
+- npm
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
+Once you have the dependencies installed..
+
+```bash
+# install dependencies
+npm i
+
+# to spin up the app locally
+npm run tauri dev
+```
+
+This project is actively in development.
