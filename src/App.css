@@ -1,0 +1,79 @@
+
+html {
+  border-radius: 8px;
+  height: 100%;
+  padding: 30px;
+  background: rgba(20, 20, 20, 0.9);
+  /*background: transparent;*/
+  color: white;
+}
+
+
+.app_wrapper {
+  display: flex;
+
+  .tiptap_wrapper {
+    flex: 1;
+  }
+
+  .tldraw_wrapper {
+    flex: 1;
+    position: relative;
+
+    .tldraw__editor {
+      position: absolute !important;
+      height: 90vh;
+    }
+  }
+}
+
+.tl-container.tl-theme__dark {
+	--color-background: transparent;
+}
+
+.tl-container.tl-theme__light {
+	--color-background: transparent;
+}
+	
+	
+/**/
+/*.excalidraw {*/
+/*  background: transparent;*/
+/*}*/
+
+/*.custom-styles .excalidraw {*/
+/*  --color-primary: #fcc6d9;*/
+/*  --color-primary-darker: #f783ac;*/
+/*  --color-primary-darkest: #e64980;*/
+/*  --color-primary-light: #f2a9c4;*/
+/*}*/
+/**/
+/*.custom-styles .excalidraw.theme--dark {*/
+/*  --color-primary: #d494aa;*/
+/*  --color-primary-darker: #d64c7e;*/
+/*  --color-primary-darkest: #e86e99;*/
+/*  --color-primary-light: #dcbec9;*/
+/*}*/
+
+*:focus {
+  border: none;
+  outline: none;
+}
+
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  /*color: #0f0f0f;*/
+  /*background-color: #f6f6f6;*/
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+
