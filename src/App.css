@@ -2,18 +2,34 @@
 html {
   border-radius: 8px;
   height: 100%;
-  padding: 30px;
   background: rgba(20, 20, 20, 0.9);
-  /*background: transparent;*/
   color: white;
 }
 
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
 .app_wrapper {
+  height: 100vh;
   display: flex;
 
+  .sidebar_wrapper {
+    flex: 0.3;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+
+    .files-list {
+      .file-entry {
+        margin: 12px;
+      }
+    }
+  }
+
   .tiptap_wrapper {
-    flex: 1;
+    flex: 0.7;
+    padding: 1rem;
   }
 
   .tldraw_wrapper {
@@ -34,26 +50,6 @@ html {
 .tl-container.tl-theme__light {
 	--color-background: transparent;
 }
-	
-	
-/**/
-/*.excalidraw {*/
-/*  background: transparent;*/
-/*}*/
-
-/*.custom-styles .excalidraw {*/
-/*  --color-primary: #fcc6d9;*/
-/*  --color-primary-darker: #f783ac;*/
-/*  --color-primary-darkest: #e64980;*/
-/*  --color-primary-light: #f2a9c4;*/
-/*}*/
-/**/
-/*.custom-styles .excalidraw.theme--dark {*/
-/*  --color-primary: #d494aa;*/
-/*  --color-primary-darker: #d64c7e;*/
-/*  --color-primary-darkest: #e86e99;*/
-/*  --color-primary-light: #dcbec9;*/
-/*}*/
 
 *:focus {
   border: none;
@@ -63,7 +59,7 @@ html {
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 12px;
   font-weight: 400;
 
   /*color: #0f0f0f;*/
