@@ -1,5 +1,4 @@
 use tauri::Manager;
-// use window_vibrancy::*;
 
 // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
 #[tauri::command]
@@ -15,18 +14,8 @@ pub fn run() {
             let window = app.get_webview_window("main").unwrap();
             window.set_title("").unwrap();
             window
-                .set_title_bar_style(tauri::TitleBarStyle::Transparent)
+                .set_title_bar_style(tauri::TitleBarStyle::Overlay)
                 .unwrap();
-
-            // #[cfg(target_os = "macos")]
-            // apply_vibrancy(
-            //     &window,
-            //     NSVisualEffectMaterial::UltraDark,
-            //     Some(NSVisualEffectState::Active),
-            //     Some(8.0),
-            // )
-            // .expect("Unsupported platform! 'apply_vibrancy' is only supported on macOS");
-            //
             Ok(())
         })
         .plugin(tauri_plugin_shell::init())

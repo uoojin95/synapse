@@ -10,7 +10,13 @@
     "frontendDist": "../dist"
   },
   "app": {
-    "windows": [{ "decorations": true, "transparent": true, "shadow": false }],
+    "windows": [
+      {
+        "decorations": true,
+        "transparent": true,
+        "shadow": false
+      }
+    ],
     "macOSPrivateApi": true,
     "security": {
       "csp": null

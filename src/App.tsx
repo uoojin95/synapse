@@ -11,20 +11,23 @@ export default function App() {
   const [selectedFile, setSelectedFile] = useState<string | null>(null);
 
   return (
-    <WorkingDirectoryContext.Provider value={workingDirectory}>
-      <SelectedFileContext.Provider value={selectedFile}>
-        <div className="app_wrapper">
-          <div className="sidebar_wrapper">
-            <FileNavigator
-              setWorkingDirectory={setWorkingDirectory}
-              setSelectedFile={setSelectedFile}
-            />
+    <>
+      <div data-tauri-drag-region className="titlebar" />
+      <WorkingDirectoryContext.Provider value={workingDirectory}>
+        <SelectedFileContext.Provider value={selectedFile}>
+          <div className="app_wrapper">
+            <div className="sidebar_wrapper">
+              <FileNavigator
+                setWorkingDirectory={setWorkingDirectory}
+                setSelectedFile={setSelectedFile}
+              />
+            </div>
+            <div className="tiptap_wrapper">
+              <Editor />
+            </div>
           </div>
-          <div className="tiptap_wrapper">
-            <Editor />
-          </div>
-        </div>
-      </SelectedFileContext.Provider>
-    </WorkingDirectoryContext.Provider>
+        </SelectedFileContext.Provider>
+      </WorkingDirectoryContext.Provider>
+    </>
   );
 }
