@@ -2,7 +2,7 @@ import { useState, useRef } from "react";
 import "./App.css";
 import Editor from './components/editor/Editor'
 import Canvas from './components/canvas/Canvas'
-import MainContent from './components/file_content/MainContent'
+import MainContent from './components/main_content/MainContent'
 import { SelectedFileContext, WorkingDirectoryContext } from './contexts/global'
 import FileNavigator from "./components/side_navigation/FileNavigator";
 import { MDXEditorMethods } from '@mdxeditor/editor'

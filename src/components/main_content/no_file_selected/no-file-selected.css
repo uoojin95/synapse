@@ -1,0 +1,28 @@
+.template-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; 
+  background-color: #f0f0f0; 
+}
+
+.template-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.template-message {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #666; 
+}
+
+.new-file-button {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
