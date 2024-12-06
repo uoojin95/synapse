@@ -12,10 +12,11 @@ pub fn run() {
         .plugin(tauri_plugin_fs::init())
         .setup(|app| {
             let window = app.get_webview_window("main").unwrap();
-            window.set_title("").unwrap();
+            window.set_title("📓").unwrap();
             window
-                .set_title_bar_style(tauri::TitleBarStyle::Overlay)
+                .set_title_bar_style(tauri::TitleBarStyle::Visible)
                 .unwrap();
+            window.set_theme(Some(tauri::Theme::Dark)).unwrap();
             Ok(())
         })
         .plugin(tauri_plugin_shell::init())

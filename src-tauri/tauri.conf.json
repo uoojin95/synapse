@@ -13,7 +13,7 @@
     "windows": [
       {
         "decorations": true,
-        "transparent": true,
+        "transparent": false,
         "shadow": false
       }
     ],

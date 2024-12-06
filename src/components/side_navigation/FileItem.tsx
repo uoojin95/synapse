@@ -1,4 +1,5 @@
 import { DirEntry } from '@tauri-apps/plugin-fs';
+import './side-navigation.css';
 
 type FileItemProps = {
   entry: DirEntry;
@@ -14,9 +15,19 @@ export default function FileItem(props: FileItemProps) {
     props.onSelectFile(entry);
   }
 
+  function tripFilename(entry: DirEntry) {
+    // trip the .md extension from the filename
+    let filename = entry.name;
+    let ext = filename.split('.').pop();
+    if (ext === 'md') {
+      filename = filename.replace('.md', '');
+    }
+    return filename;
+  }
+
   return (
     <div className="file-entry" onClick={handleSelectFile}>
-      {entry.name}
+      {tripFilename(entry)}
     </div>
   );
 }
