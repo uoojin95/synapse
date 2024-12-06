@@ -42,13 +42,13 @@ export default function App() {
           {/*     <Canvas /> */}
           {/*   </div> */}
           {/* </div> */}
-          <button
-            className="toggle_canvas_button"
-            onClick={() => {
-              console.log("Toggling canvas");
-              setCanvasFolded(!canvasFolded);
-            }}
-          >🎨</button>
+          {/* <button */}
+          {/*   className="toggle_canvas_button" */}
+          {/*   onClick={() => { */}
+          {/*     console.log("Toggling canvas"); */}
+          {/*     setCanvasFolded(!canvasFolded); */}
+          {/*   }} */}
+          {/* >🎨</button> */}
         </div>
       </SelectedFileContext.Provider>
     </WorkingDirectoryContext.Provider>

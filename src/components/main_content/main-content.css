@@ -1,0 +1,69 @@
+.app_wrapper{
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+
+  .no_file_selected {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 1.5rem;
+    color: grey;
+  }
+
+  .toggle_canvas_button {
+    position: absolute;
+    top: 3%;
+    left: 100%;
+    background: #f8f8f8;
+    border: 1px solid lightgrey;
+    border-right: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    z-index: 1000;
+    transform: translateX(-100%)
+  }
+
+  .sidebar_wrapper {
+    min-width: 20px;
+    max-width: 200px;
+    border-right: 1px solid lightgrey;
+  }
+
+  .content_wrapper {
+    display: flex;
+    flex: 1;
+    position: relative;
+
+    .tiptap_wrapper {
+      flex: 1;
+      overflow-y: auto;
+      border-right: 1px solid lightgrey;
+    }
+
+    .canvas_wrapper {
+      position: relative;
+      flex: 1;
+    }
+
+    /*.canvas_wrapper {*/
+    /*  position: absolute; */
+    /*  top: 0;*/
+    /*  right: 0;*/
+    /*  width: 100%; */
+    /*  height: 100%; */
+    /*  background-color: #f0f0f0; /* Optional: Light background for Excalidraw */*/
+    /*  left: 0%;*/
+    /*  z-index: 100;*/
+    /*}*/
+
+    /*.canvas_wrapper.folded {*/
+    /*  /*left: 100%*/*/
+    /*  /*display: none;*/*/
+    /*}*/
+
+      }
+}
+
+
