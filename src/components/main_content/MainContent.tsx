@@ -5,8 +5,8 @@ import { path } from '@tauri-apps/api'
 import { ALL_PLUGINS } from '../editor/editor_plugins'
 import { MDXEditor, MDXEditorMethods } from '@mdxeditor/editor'
 import '../editor/editor.css'
-import Canvas from '../canvas/Canvas'
-import { ToastContainer, toast, Bounce, Flip, Zoom } from 'react-toastify';
+import Canvas from '../canvas/Canvas4'
+import { ToastContainer, toast, Flip  } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import NoFileSelected from './no_file_selected/NoFileSelected'
 import './toastify.css'
@@ -14,11 +14,7 @@ import './main-content.css'
 
 const initialContent = 'Start typing..'
 
-type MainContentProps = {
-  canvasFolded: boolean;
-}
-
-export default function MainContent(props: MainContentProps) {
+export default function MainContent() {
   let workingDirectory = useContext(WorkingDirectoryContext)
   let selectedFile = useContext(SelectedFileContext)
   const ref = useRef<MDXEditorMethods>(null)
@@ -94,25 +90,25 @@ export default function MainContent(props: MainContentProps) {
   return (
     <div className="content_wrapper">
       <ToastContainer />
-      {
-        selectedFile == null ?
-          <NoFileSelected /> :
-          <>
-            <div className="tiptap_wrapper" onClick={handleEditorClick}>
-              <MDXEditor
-                contentEditableClassName="editor"
-                ref={ref}
-                markdown={initialContent}
-                plugins={ALL_PLUGINS}
-                autoFocus={false}
-                onBlur={handleBlur}
-              />
-            </div>
-            <div className={`canvas_wrapper ${props.canvasFolded ? "folded" : ""}`}>
-              <Canvas />
-            </div>
-          </>
-      }
+      {selectedFile == null ? (
+        <NoFileSelected />
+      ) : (
+        <>
+          <div className="tiptap_wrapper" onClick={handleEditorClick}>
+            <MDXEditor
+              contentEditableClassName="editor"
+              ref={ref}
+              markdown={initialContent}
+              plugins={ALL_PLUGINS}
+              autoFocus={false}
+              onBlur={handleBlur}
+            />
+          </div>
+          <div className="canvas_wrapper">
+            <Canvas />
+          </div>
+        </>
+      )}
     </div>
   );
 }
